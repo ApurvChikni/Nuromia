@@ -1,0 +1,122 @@
+{% extends "base.html"%}
+
+{% block hero %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+  <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Neuromia</span></h2>
+        <p class="animate__animated fanimate__adeInUp">Our main motto behind creating this project is to reduce the
+          burden
+          on our doctors in this critical and crucial timing of Covid-19.
+          This is the time when we have to help them and do what we can.
+          At Neuromia we help them by diagnosing the pneumonia in this Covid-19 conditions and save there crucial time.
+          With
+          that time they can cure others who needs most and save there life.</p>
+        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">The new strain of Novel Coronavirus is highly
+          <b style="color: red;">contagious</b>
+        </h2>
+        <p class="animate__animated animate__fadeInUp">The advisory noted that the symptoms were “different” this time:
+          absence of cough and fever and yet people were testing
+          positive for the disease. Joint pain, weakness and loss of appetite, it Gujarat Covid stated, could also be
+          indicative
+          of pneumonia caused by Covid-19.
+        </p>
+        <a href="https://indianexpress.com/article/cities/ahmedabad/in-gujarat-doctors-hint-at-high-viral-load-new-symptoms-among-patients-7257848/"
+          target="_blank" rel="noopener noreferrer"
+          class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animate__animated animate__fadeInDown">The Biggest killer</h2>
+        <p class="animate__animated animate__fadeInUp">Pneumonia is the world's biggest infectious killer of adults and
+          children - claiming the lives of 2.5 million, including
+          672,000 children, in 2019.
+        </p>
+        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+    </a>
+
+  </div>
+
+  <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28 " preserveAspectRatio="none">
+    <defs>
+      <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+    </defs>
+    <g class="wave1">
+      <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+    </g>
+    <g class="wave2">
+      <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+    </g>
+    <g class="wave3">
+      <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+    </g>
+  </svg>
+
+</section><!-- End Hero -->
+{% endblock %}
+
+{% block about %}
+<section id="about" class="about">
+  <div class="container">
+
+    <div class="section-title" data-aos="zoom-out">
+      <h2>About</h2>
+      <p>Who we are</p>
+    </div>
+
+    <div class="row content" data-aos="fade-up">
+      <div class="col-lg-6">
+        <p>
+          We are team of computer engineers who wants to use their knowledge to save other's life.
+          We want to apply current developed deep learning technologies to our medical sector and try to help them. </p>
+        <p>What we use.</p>
+        <ul>
+          <li><i class="ri-check-double-line"></i> Convolutional Neural Network
+          </li>
+          <li><i class="ri-check-double-line"></i> Transfer Learning
+          </li>
+          <li><i class="ri-check-double-line"></i> State of the art VGG-19 Imagenet model
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0">
+        <p>
+          We want to use deep learning for the analysis and diagnosis of biomedical and health care problems. The
+          technique has recorded a number of achievements for unearthing meaningful features and accomplishing tasks
+          that were hitherto difficult to solve by other methods and human experts. Currently, biological and medical
+          devices, treatment, and applications are capable of generating large volumes of data in the form of images,
+          sound, text, graphs and signals creating the concept of big data. Deep Learning is a type of machine learning
+          algorithm that has deeper hidden layers of similar function cascaded into the network and has the capability
+          to make meaning from medical sector.
+        </p>
+        <a href="/about" class="btn-learn-more">Learn More</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Section -->
+{% endblock %}

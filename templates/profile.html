@@ -1,0 +1,66 @@
+{% extends "base.html"%}
+{% block profile%}
+<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+<link
+    href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+<link href="{{ url_for('static', filename='css/profile.css') }}" rel="stylesheet">
+<div class="modal_p">
+    <img src="{{ image_file }}" alt="">
+    <div class="close"></div>
+</div>
+
+<div class="pro_container">
+    <div class="card aos-init aos-animate" data-aos="zoom-out">
+        <div class="header">
+            <div class="hamburger-menu">
+                <div class="center"></div>
+            </div>
+            <a href="/contect" class="mail">
+                <i class="far fa-envelope"></i>
+            </a>
+            <div class="main">
+                <div class="image" style="background: url({{image_file}}) no-repeat center / cover;">
+                    <div class="hover">
+                        <i class="fas fa-camera fa-2x"></i>
+                    </div>
+                </div>
+                <h3 class="name">{{uname_p}}</h3>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <div class="about-container">
+                    <h3 class="title">User name</h3>
+                    <p class="text">{{name_p}}</p>
+                </div>
+                <div class="about-container">
+                    <h3 class="title">Email</h3>
+                    <p class="text">{{email_p}}</p>
+                </div>
+                <div class="about-container">
+                    <h3 class="title">Contact</h3>
+                    <p class="text">+91 {{contect_p}}</p>
+                </div>
+                <div class="about-container">
+                    <h3 class="title">Result</h3>
+                    <p class="text">{{result_p}}</p>
+                </div>
+            </div>
+            <div class="buttons-wrap">
+                <div class="follow-wrap">
+                    <a href="/eprofile" class="follow">Edit Profile</a>
+                </div>
+                <div class="share-wrap">
+                    <a href="/result" class="share">Result</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename ='js/profile.js')}}"></script>
+
+
+{% endblock %}

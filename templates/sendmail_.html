@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}" />
+  <title>Neuromia-Reset Password</title>
+  <link href="{{ url_for('static', filename ='img/Nuromia logo final.png')}}" rel="icon">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action='/reset_password' class="sign-in-form" method="POST">
+          <h2 class="title">Reset Password</h2>
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <div class="notification is-danger">
+            {{ messages[0] }}
+          </div>
+          {% endif %}
+
+          {% endwith %}
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <input type="submit" value="send mail" class="btn solid" />
+        </form>
+
+
+
+
+
+        <form class="sign-up-form" method="POST">
+
+        </form>
+      </div>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+
+        </div>
+        <img src="{{ url_for('static', filename ='img/forgotpass/forg.svg')}}" class="image" alt="" />
+      </div>
+      <div class="panel right-panel">
+      </div>
+    </div>
+  </div>
+
+  <script src="{{url_for('static', filename='js/login copy.js')}}"></script>
+</body>
+
+</html>

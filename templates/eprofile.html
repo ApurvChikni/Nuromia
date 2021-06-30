@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Nuromia-Edit Profile</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/eprofile.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<link href="{{ url_for('static', filename ='img/Nuromia logo final.png')}}" rel="icon">
+
+	<!-- <link href="{{ url_for('static', filename ='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet"> -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<img class="wave" src="{{ url_for('static', filename='img/eprofile/wave.png') }}">
+	<div class="container">
+		<div class="img">
+			<h1 class="title">EDIT PROFILE</h1>
+			<img src="{{ url_for('static', filename='img/eprofile/bg.svg') }}">
+		</div>
+		<div class="login-content">
+			<form action="/profilevalidation" method="POST" enctype="multipart/form-data">
+				<img src="{{ image_file }}">
+				<!-- {% with messages = get_flashed_messages() %}
+				{% if messages %}
+				{% for i in messages %}
+				<div class="notification is-danger">
+					{{ i }}
+				</div>
+				{% endfor %}
+				{% endif %} -->
+				<!-- {% endwith %} -->
+				{% with messages = get_flashed_messages(with_categories=true) %}
+				{% if messages %}
+				{% for category, message in messages %}
+				<div class="alert alert-{{ category }}"> {{ message|capitalize }} </div>
+				{% endfor %}
+				{% endif %}
+				{% endwith %}
+				<div class="input-div one focus">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>User Id</h5>
+						<input type="text" name="puserid" class="input" value="{{ current_user.username }}">
+					</div>
+				</div>
+				<div class="input-div one focus ">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>Username</h5>
+						<input type="text" name="pusername" class="input" value='{{ current_user.name }}'>
+					</div>
+				</div>
+				<div class="input-div one focus">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>Email</h5>
+						<input type="text" name="pemail" class="input" value='{{ current_user.email }}'>
+					</div>
+				</div>
+				<div class="input-div one focus">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>Contact</h5>
+						<input type="text" name="pcotact" class="input" value='{{ current_user.contect }}'>
+					</div>
+				</div>
+				<div class="input-div pass ch focus">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div_ch">
+						<h5>Username</h5>
+						<div id="data">
+							No File Chosen..
+						</div>
+
+						<input class="form-control-file" id="selectfile" name="file_1" type="file"
+							accept=".png, .jpg, .jpeg">
+						<div class="success" id="succ" hidden>
+							<i class="far fa-check-circle text-success"></i>
+						</div>
+					</div>
+				</div>
+				<!-- <input class="form-control-file" name="file_1" type="file" accept=".png, .jpg, .jpeg"> -->
+				<input type="submit" class="btn" value="Update">
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename ='js/eprofile.js')}}"></script>
+</body>
+
+</html>

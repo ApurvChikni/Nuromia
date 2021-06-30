@@ -1,0 +1,227 @@
+{% extends "base.html"%}
+{% block aboutp %}
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+  <div class="container">
+
+    <div class="section-title" data-aos="zoom-out">
+      <h2>About</h2>
+      <p>How it Works.</p>
+    </div>
+
+    <ul class="nav nav-tabs row d-flex">
+      <li class="nav-item col-3" data-aos="zoom-in">
+        <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+          <i class="ri-lungs-line"></i>
+          <h4 class="d-none d-lg-block">COVID-19 and Pneumonia</h4>
+        </a>
+      </li>
+      <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+        <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+          <i class="ri-body-scan-line"></i>
+          <h4 class="d-none d-lg-block">Convolutional Neural Network</h4>
+        </a>
+      </li>
+      <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
+        <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+          <i class="ri-gps-line"></i>
+
+          <h4 class="d-none d-lg-block">Vgg19 Architecture</h4>
+        </a>
+      </li>
+      <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
+        <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+          <i class="ri-user-shared-line"></i>
+          <h4 class="d-none d-lg-block">Transfer Learning</h4>
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content" data-aos="fade-up">
+      <div class="tab-pane active show" id="tab-1">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+            <h3>What is the relationship?</h3>
+            <p class="font-italic">
+              According to the Centers for Disease Control and Prevention (CDC)Trusted Source, COVID-19 is a respiratory
+              illness. A
+              person may have a dry cough, fever, muscle aches, and fatigue.
+            </p>
+            <p class="font-italic">
+              The virus can progress through the respiratory tract and into a person’s lungs. This causes inflammation
+              and the air
+              sacs, or alveoli, that can fill with fluid and pus. This progression then limitsTrusted Source a person’s
+              ability to
+              take in oxygen.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> People with severe cases of pneumonia may have lungs that are so
+                inflamed they cannot take in enough oxygen or expel
+                enough carbon dioxide.</li>
+              <li><i class="ri-check-double-line"></i> Continuous oxygen deprivation can damage many of the body’s
+                organs, causing kidney failure, heart failure, and other
+                life threatening conditions.</li>
+              <li><i class="ri-check-double-line"></i> According to the World Health Organization (WHO)Trusted Source,
+                the most common diagnosis for severe COVID-19 is severe
+                pneumonia. For people who do develop symptoms in the lungs, COVID-19 may be life threatening.</li>
+            </ul>
+            <p>
+              The new coronavirus causes severe inflammation in your lungs. It damages the cells and tissue that line
+              the air sacs in
+              your lungs. These sacs are where the oxygen you breathe is processed and delivered to your blood. The
+              damage causes
+              tissue to break off and clog your lungs. The walls of the sacs can thicken, making it very hard for you to
+              breathe
+            </p>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <img src="{{url_for('static', filename='img/about/cov.jpg')}}" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="tab-2">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+            <h3>Why CNN for Image Classification?</h3>
+            <p>
+              In machine learning, Convolutional Neural Networks (CNN or ConvNet) are complex feed forward neural
+              networks. CNNs are
+              used for image classification and recognition because of its high accuracy.
+            </p>
+            <p class="font-italic">
+              It was proposed by computer scientist Yann LeCun in the late 90s, when he was inspired from the human
+              visual perception
+              of recognizing things.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> There are a lot of algorithms that people used for image
+                classification before CNN became popular. People used to create
+                features from images and then feed those features into some classification algorithm like SVM.</li>
+              <li><i class="ri-check-double-line"></i> Some algorithm also used the pixel level values of images as a
+                feature vector too. To give an example, you could train a
+                SVM with 784 features where each feature is the pixel value for a 28x28 image.</li>
+              <p class="font-italic">
+                So why CNN and why they work so much better?
+              </p>
+              <li><i class="ri-check-double-line"></i> CNNs can be thought of automatic feature extractors from the
+                image.</li>
+              <li><i class="ri-check-double-line"></i> While if I use a algorithm with pixel vector I lose a lot of
+                spatial interaction between pixels, a CNN effectively uses
+                adjacent pixel information to effectively downsample the image first by convolution and then uses a
+                prediction layer at
+                the end.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <img src="{{url_for('static', filename='img/about/neural net.jpg')}}" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="tab-3">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+            <h3>VGG19 Architecture</h3>
+            <p>
+              The input to VGG based convNet is a 224*224 RGB image. Preprocessing layer takes the RGB image with
+              pixel values in the range of 0–255 and subtracts the mean image values which is calculated over the
+              entire ImageNet training set.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> A fixed size of (224 * 224) RGB image was given as input to
+                this network which means that the matrix was of shape (224,224,3).</li>
+              <li><i class="ri-check-double-line"></i> This research aspires to develop a Deep-Learning System (DLS)
+                to diagnose the lung abnormality using chest X-ray (radiograph) images. The proposed work is
+                implemented using; (i) Conventional chest radiographs and (ii) Chest radiograph treated with a
+                threshold filter.</li>
+              <li><i class="ri-check-double-line"></i> The initial experimental evaluation is carried out using the
+                traditional DLS, such as AlexNet, VGG16, VGG19 and ResNet50 with a SoftMax classifier. The results
+                confirmed that, VGG19 provides better classification accuracy (86.97%) compared to other methods.
+              </li>
+              <li><i class="ri-check-double-line"></i> The result confirms that VGG19 with RF classifier offers
+                better accuracy (95.70%). When the similar experiment is repeated using threshold filter treated
+                chest radiographs, the VGG19 with RF classifier offered superior classification accuracy (97.94%).
+              </li>
+              <li><i class="ri-check-double-line"></i> This result confirms that, proposed DLS will work well on the
+                benchmark images and in the future, it can be considered to diagnose clinical grade chest
+                radiographs.</li>
+            </ul>
+            <p class="font-italic">
+              VGGNet is a Convolutional Neural Network architecture proposed by Karen Simonyan and Andrew Zisserman
+              from the University of Oxford in 2014. This paper mainly focuses on the effect of the convolutional
+              neural network depth on its accuracy.
+            </p>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <img src="{{url_for('static', filename='img/about/vgg1.png')}}" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="tab-4">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+            <h3>Why we used transfer learning</h3>
+            <p>
+              In the context of deep learning, transfer learning implies a transference (or reuse) of knowledge which
+              was used to
+              train a model for one task to train another model for other task.
+            </p>
+            <p class="font-italic">
+              Through this method, the more generic layers of the model such as the ones closer to the input are kept as
+              is, whereas
+              the task-specific layers (adapted for task X or Y) which are closer to the final output layers are
+              modified. A few
+              things to keep in mind are:
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Task X and task Y are relatively similar</li>
+              <li><i class="ri-check-double-line"></i> Datasets for Task X and Task Y are relatively similar. Of course,
+                there are cases when the datasets for Task X and Task
+                Y are widely different, but in these cases, the size of the dataset is helpful to make the decision.
+              </li>
+
+
+
+              <!-- <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
+                pariatur.</li> -->
+            </ul>
+
+            <p class="font-italic">
+              Why is Transfer Learning popular in Deep Learning?
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Learning capability: There is a good transferability of knowledge
+                amongst neural networks. Several models for several
+                tasks have been successfully trained using transfer learning. This is a good paper to read: How
+                transferable are
+                features in deep neural networks?</li>
+              <li><i class="ri-check-double-line"></i> Feature Extraction: Several of the pre-trained models are often
+                utilized as a feature extractor. These features once
+                extracted are then fed to further downstream tasks through other task-specific layers (eg ImageNet
+                trained
+                classification to Dog breed classification) or another learning algorithm (eg ImageNet trained
+                classification to image
+                captioning models). This builds into Multi-Task Learning.</li>
+              <li><i class="ri-check-double-line"></i> Data: Deep Learning neural networks have been empirically shown
+                to be data-hungry and usually require “big data”.
+                However, there are a lot of tasks that don’t have a lot of data or don’t have a lot of labeled data
+                available. Transfer
+                learning enables fine-tuning a pre-existing model to work for such tasks.</li>
+
+
+
+              <!-- <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
+                            pariatur.</li> -->
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <img src="{{url_for('static', filename='img/about/transfer.png')}}" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Features Section -->
+{% endblock %}
